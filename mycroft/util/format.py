@@ -30,29 +30,24 @@ from collections import namedtuple
 from calendar import leapdays
 from enum import Enum
 
-from mycroft.util.lang import get_full_lang_code, get_primary_lang_code
+from lingua_franca.lang import get_full_lang_code, get_primary_lang_code
 
-from mycroft.util.lang.format_en import *
-from mycroft.util.lang.format_pt import *
-from mycroft.util.lang.format_it import *
-from mycroft.util.lang.format_sv import *
-from mycroft.util.lang.format_hu import *
+from lingua_franca.lang.format_en import *
+from lingua_franca.lang.format_pt import *
+from lingua_franca.lang.format_it import *
+from lingua_franca.lang.format_sv import *
+from lingua_franca.lang.format_hu import *
 
-from mycroft.util.lang.format_es import nice_number_es
-from mycroft.util.lang.format_es import nice_time_es
-from mycroft.util.lang.format_es import pronounce_number_es
-from mycroft.util.lang.format_de import nice_number_de
-from mycroft.util.lang.format_de import nice_time_de
-from mycroft.util.lang.format_de import pronounce_number_de
-from mycroft.util.lang.format_fr import nice_number_fr
-from mycroft.util.lang.format_fr import nice_time_fr
-from mycroft.util.lang.format_fr import pronounce_number_fr
-from mycroft.util.lang.format_nl import nice_time_nl
-from mycroft.util.lang.format_nl import pronounce_number_nl
-from mycroft.util.lang.format_nl import nice_number_nl
-from mycroft.util.lang.format_da import nice_number_da
-from mycroft.util.lang.format_da import nice_time_da
-from mycroft.util.lang.format_da import pronounce_number_da
+from lingua_franca.lang.format_es import (nice_number_es, nice_time_es,
+                                          pronounce_number_es)
+from lingua_franca.lang.format_de import (nice_number_de, nice_time_de,
+                                          pronounce_number_de)
+from lingua_franca.lang.format_fr import (nice_number_fr, nice_time_fr,
+                                          pronounce_number_fr)
+from lingua_franca.lang.format_nl import (nice_time_nl, pronounce_number_nl,
+                                          nice_number_nl)
+from lingua_franca.lang.format_da import (nice_number_da, nice_time_da,
+                                          pronounce_number_da)
 
 from padatious.util import expand_parentheses
 
