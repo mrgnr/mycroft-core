@@ -298,8 +298,12 @@ class RecognizerLoop(EventEmitter):
 
         LOG.debug('Using microphone (None = default): '+str(device_index))
 
-        self.microphone = MutableMicrophone(device_index, rate,
-                                            mute=self.mute_calls > 0)
+        if device_name == 'websocket':
+            from mycroft.client.speech.websocketsource import WebSocketAudioSource
+            self.microphone = WebSocketAudioSource()
+        else:
+            self.microphone = MutableMicrophone(device_index, rate,
+                                                mute=self.mute_calls > 0)
 
         self.wakeword_recognizer = self.create_wake_word_recognizer()
         # TODO - localization
